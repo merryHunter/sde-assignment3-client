@@ -61,7 +61,9 @@ public class PeopleClient{
     }
     
 	public static void main(String[] args) throws Exception {
-		URL url = new URL("http://127.0.1.1:6902/as3/people?wsdl");
+		URL url = new URL("https://assignment3-chernukha.herokuapp.com/people?wsdl");
+		
+			
         //1st argument service URI, refer to wsdl document above
         //2nd argument is service name, refer to wsdl document above
         QName qname = new QName("http://ws.soap.assignment3.introsde/", "PeopleService"); 

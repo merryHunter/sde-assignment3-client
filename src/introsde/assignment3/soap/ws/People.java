@@ -27,6 +27,18 @@ public interface People {
 
     /**
      * 
+     * @return
+     *     returns java.util.List<introsde.assignment3.soap.ws.Person>
+     */
+    @WebMethod
+    @WebResult(name = "people", targetNamespace = "")
+    @RequestWrapper(localName = "readPersonList", targetNamespace = "http://ws.soap.assignment3.introsde/", className = "introsde.assignment3.soap.ws.ReadPersonList")
+    @ResponseWrapper(localName = "readPersonListResponse", targetNamespace = "http://ws.soap.assignment3.introsde/", className = "introsde.assignment3.soap.ws.ReadPersonListResponse")
+    @Action(input = "http://ws.soap.assignment3.introsde/People/readPersonListRequest", output = "http://ws.soap.assignment3.introsde/People/readPersonListResponse")
+    public List<Person> readPersonList();
+
+    /**
+     * 
      * @param idPerson
      * @return
      *     returns introsde.assignment3.soap.ws.Person
@@ -39,18 +51,6 @@ public interface People {
     public Person readPerson(
         @WebParam(name = "idPerson", targetNamespace = "")
         int idPerson);
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<introsde.assignment3.soap.ws.Person>
-     */
-    @WebMethod
-    @WebResult(name = "people", targetNamespace = "")
-    @RequestWrapper(localName = "readPersonList", targetNamespace = "http://ws.soap.assignment3.introsde/", className = "introsde.assignment3.soap.ws.ReadPersonList")
-    @ResponseWrapper(localName = "readPersonListResponse", targetNamespace = "http://ws.soap.assignment3.introsde/", className = "introsde.assignment3.soap.ws.ReadPersonListResponse")
-    @Action(input = "http://ws.soap.assignment3.introsde/People/readPersonListRequest", output = "http://ws.soap.assignment3.introsde/People/readPersonListResponse")
-    public List<Person> readPersonList();
 
     /**
      * 

@@ -1,0 +1,296 @@
+Wsdl URL: https://assignment3-chernukha.herokuapp.com/people?wsdl
+
+Method 1: readPersonList() => List<Person>
+***
+Parameters: <>
+Response:
+idPerson: 1
+Firstname: Ivan
+Lastname:  Chernukha
+Birthdate: 1995-07-03
+ActivityPreferences:[
+[idActivity: 2
+Name: Studying
+Description: Studying concurrency for the 2nd apello
+Place: UniTrento
+Type: University
+Startdate: 2017-01-22],
+[idActivity: 3
+Name: Hunting
+Description: Hunting in forest for boars and foxes
+Place: Koriukivka, Ukraine
+Type: Extreme
+Startdate: 2012-11-10],
+]
+
+idPerson: 4
+Firstname: Oleg
+Lastname:  Matios
+Birthdate: 1990-09-30
+ActivityPreferences:[
+[idActivity: 5
+Name: Bungee jumping
+Description: Bungee jumping from a high building in New York
+Place: New York
+Type: Extreme
+Startdate: 2018-01-18],
+[idActivity: 6
+Name: Escape room
+Description: Escape from Palazzo delle Albere
+Place: Palazzo delle Albere, Trento
+Type: Social
+Startdate: 2017-01-01],
+]
+
+idPerson: 7
+Firstname: Nicol
+Lastname:  Vecchia
+Birthdate: 1998-04-22
+ActivityPreferences:[
+[idActivity: 8
+Name: Exhibition
+Description: A new exhibition of a great painter
+Place: Buonconsiglio Castle, Trento
+Type: City
+Startdate: 2017-01-01],
+]
+
+idPerson: 9
+Firstname: Sofia
+Lastname:  Alzetta
+Birthdate: 1985-05-05
+ActivityPreferences:[
+[idActivity: 10
+Name: Resort
+Description: Resort on Bali island
+Place: Bali, Indonesia
+Type: Social
+Startdate: 2015-07-14],
+[idActivity: 11
+Name: Quest
+Description: Quest in the city center
+Place: Trento
+Type: City
+Startdate: 2017-02-03],
+]
+
+idPerson: 12
+Firstname: Dmytro
+Lastname:  Koval
+Birthdate: 1994-12-01
+ActivityPreferences:[
+[idActivity: 13
+Name: Snowboarding
+Description: Snowboarding in Alpines
+Place: Dolimities, Italy
+Type: Sport
+Startdate: 2017-01-01],
+[idActivity: 14
+Name: Skiing
+Description: Skiing in Carpathian mountains
+Place: Carpathy, Ukraine
+Type: Sport
+Startdate: 2017-02-01],
+]
+
+
+Method 2: readPerson(1) => Person
+***
+Parameters: id = 1
+Response: 
+idPerson: 1
+Firstname: Ivan
+Lastname:  Chernukha
+Birthdate: 1995-07-03
+ActivityPreferences:[
+[idActivity: 2
+Name: Studying
+Description: Studying concurrency for the 2nd apello
+Place: UniTrento
+Type: University
+Startdate: 2017-01-22],
+[idActivity: 3
+Name: Hunting
+Description: Hunting in forest for boars and foxes
+Place: Koriukivka, Ukraine
+Type: Extreme
+Startdate: 2012-11-10],
+]
+
+Method 3: updatePerson(Person p) => Person
+***
+Parameters: <Person object id = 1 , name should be changed to 'Yaroslav'> 
+Response: 
+idPerson: 1
+Firstname: Yaroslav
+Lastname:  Chernukha
+Birthdate: 1995-07-03
+ActivityPreferences:[
+[idActivity: 2
+Name: Studying
+Description: Studying concurrency for the 2nd apello
+Place: UniTrento
+Type: University
+Startdate: 2017-01-22],
+[idActivity: 3
+Name: Hunting
+Description: Hunting in forest for boars and foxes
+Place: Koriukivka, Ukraine
+Type: Extreme
+Startdate: 2012-11-10],
+]
+
+Method 4: createPerson(Person p) => Person
+***
+Parameters: <new Person>
+Response: 
+idPerson: 15
+Firstname: Leo
+Lastname:  Da Vinci
+Birthdate: 1994-04-14
+ActivityPreferences:[
+[idActivity: 16
+Name: Football
+Description: Playing for football club A.S. Roma
+Place: Rome
+Type: Sport
+Startdate: 2010-10-10],
+]
+
+Method 5: deletePerson(int id)
+***
+Parameters: id=15
+The person has been deleted successfully!
+Method 6: readPersonPreferences(Long id, String activity_type)	=> List<Preference>
+***
+Parameters: id=1 activity_type=Extreme
+Response: 
+[idActivity: 3
+Name: Hunting
+Description: Hunting in forest for boars and foxes
+Place: Koriukivka, Ukraine
+Type: Extreme
+Startdate: 2012-11-10],
+
+Method 7: readPreferences() => List<Preferences>
+***
+Response: 
+[idActivity: 3
+Name: Hunting
+Description: Hunting in forest for boars and foxes
+Place: Koriukivka, Ukraine
+Type: Extreme
+Startdate: 2012-11-10],
+[idActivity: 2
+Name: Studying
+Description: Studying concurrency for the 2nd apello
+Place: UniTrento
+Type: University
+Startdate: 2017-01-22],
+[idActivity: 5
+Name: Bungee jumping
+Description: Bungee jumping from a high building in New York
+Place: New York
+Type: Extreme
+Startdate: 2018-01-18],
+[idActivity: 6
+Name: Escape room
+Description: Escape from Palazzo delle Albere
+Place: Palazzo delle Albere, Trento
+Type: Social
+Startdate: 2017-01-01],
+[idActivity: 8
+Name: Exhibition
+Description: A new exhibition of a great painter
+Place: Buonconsiglio Castle, Trento
+Type: City
+Startdate: 2017-01-01],
+[idActivity: 11
+Name: Quest
+Description: Quest in the city center
+Place: Trento
+Type: City
+Startdate: 2017-02-03],
+[idActivity: 10
+Name: Resort
+Description: Resort on Bali island
+Place: Bali, Indonesia
+Type: Social
+Startdate: 2015-07-14],
+[idActivity: 14
+Name: Skiing
+Description: Skiing in Carpathian mountains
+Place: Carpathy, Ukraine
+Type: Sport
+Startdate: 2017-02-01],
+[idActivity: 13
+Name: Snowboarding
+Description: Snowboarding in Alpines
+Place: Dolimities, Italy
+Type: Sport
+Startdate: 2017-01-01],
+
+Method 8: readPersonPreferences(int id, int activity_id) => Preference
+***
+Parameters: id=12 activity_id=13
+Response: 
+[idActivity: 13
+Name: Snowboarding
+Description: Snowboarding in Alpines
+Place: Dolimities, Italy
+Type: Sport
+Startdate: 2017-01-01],
+
+Method 9: savePersonPreferences(int id, Activity activity)
+***
+Parameters: id=12 activity=[idActivity: 0
+Name: Football
+Description: Playing football in the yard
+Place: Rome
+Type: Sport
+Startdate: 2010-10-10],
+
+Saved! Here's response from readPerson(id=12 ):
+idPerson: 12
+Firstname: Dmytro
+Lastname:  Koval
+Birthdate: 1994-12-01
+ActivityPreferences:[
+[idActivity: 13
+Name: Snowboarding
+Description: Snowboarding in Alpines
+Place: Dolimities, Italy
+Type: Sport
+Startdate: 2017-01-01],
+[idActivity: 14
+Name: Skiing
+Description: Skiing in Carpathian mountains
+Place: Carpathy, Ukraine
+Type: Sport
+Startdate: 2017-02-01],
+[idActivity: 17
+Name: Football
+Description: Playing football in the yard
+Place: Rome
+Type: Sport
+Startdate: 2010-10-10],
+]
+
+Method 10:  updatePersonPreferences( Long id, Activity activity) => Preference
+***
+Parameters: id=12 activity=[idActivity: 14
+Name: Skiing
+Description: Skiing in Carpathian mountains
+Place: Trento
+Type: Sport
+Startdate: 2017-02-01],
+
+Place should be changed to Trento from Carpathy, Ukraine
+Response: 
+[idActivity: 14
+Name: Skiing
+Description: Skiing in Carpathian mountains
+Place: Trento
+Type: Sport
+Startdate: 2017-02-01],
+
